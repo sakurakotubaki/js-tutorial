@@ -6,12 +6,35 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Hello</h1>
+    <form>
+        <input type="text">
+    </form>
+    <button>Click me</button>
+    <ul>
+    </ul>
     <script>
-       window.setTimeout(() => {
-           console.log('Hello');
-           
-       }, 3000);
+       // ulに１０件の配列の値を表示する
+       const ul = document.querySelector('ul');
+       const arr = ['apple', 'banana', 'cherry', 'date', 'elderberry', 'fig', 'grape', 'honeydew', 'imbe', 'jackfruit'];
+         arr.forEach((item) => {
+              const li = document.createElement('li');
+              li.textContent = item;
+              ul.appendChild(li);
+         });
+         // keywordに入力した文字列を含む配列の値を表示する
+         const input = document.querySelector('input');
+         const button = document.querySelector('button');
+            button.addEventListener('click', () => {
+                const keyword = input.value;
+                ul.textContent = '';
+                arr.forEach((item) => {
+                    if (item.includes(keyword)) {
+                        const li = document.createElement('li');
+                        li.textContent = item;
+                        ul.appendChild(li);
+                    }
+                });
+            });
     </script>
 </body>
 </html>

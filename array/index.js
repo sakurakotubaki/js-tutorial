@@ -1,36 +1,37 @@
-let arr = [1, 2, 3, 4, 5];
-// [0]
-console.log(arr[0]); // 1
-// [1]
-console.log(arr[1]); // 2
-// count
-console.log(arr.length); // 5
-
-/*
-iは、indexの略で、添字を表す変数名です。
-*/
-for (let i = 0; i < arr.length; i++) {
-    arr[i] += 10;
-}
-console.log(arr); // [11, 12, 13, 14, 15]
-
 /**
- * for in
- * key: オブジェクトのプロパティが１つずつ渡される。
- * obj: オブジェクトや配列を設定できます。
+ * 配列の基本操作
+ * push: 配列の末尾に要素を追加する
+ * pop: 配列の末尾の要素を削除する
+ * shift: 配列の先頭の要素を削除する
+ * unshift: 配列の先頭に要素を追加する
  */
+let woman = ['minn', 'yui'];
+// 配列の末尾に要素を追加する
+woman.push('Yukino');
+console.log(woman);
 
-// obj内で、プロパティ名がskipだけ加算せずスキップする。
-const obj = {
-    a: 1,
-    b: 2,
-    skip: 3,
-    d: 4
-};
+// 配列の末尾の要素を削除する
+woman.pop();
+console.log(woman);
 
-for (let key in obj) {
-    if (key === 'skip') {
-        continue;
-    }
-    obj[key] += 10;
-}
+// 配列の先頭に要素を追加する
+woman.unshift('Yukino');
+console.log(woman);
+
+// 配列の先頭の要素を削除する
+woman.shift('Yukino');
+console.log(woman);
+
+// filterで、yuiを配列から取り出す。
+let people = ['minn', 'yui31', 'yukino'];
+let y = people.filter((p) => {
+    return p === 'yui31';
+});
+console.log(y);
+
+// reduceで、配列の合計を求める。
+let p = ["1", "2", "3", "4", "5"];
+let sum = p.reduce((prev, current) => {
+    return prev + current;
+});
+console.log(sum);
