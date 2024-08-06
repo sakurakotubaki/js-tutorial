@@ -8,10 +8,17 @@
 <body>
     <h1>Hello</h1>
     <script>
-        let is = true;
-        if(is) {
-            window.alert('Hello');
-        }
+       // thisを使った例
+         const obj = {
+              name: 'Tom',
+              sayHello: function() {
+                console.log('Hello ' + this.name);
+                // このthisはobjを指す
+              }
+         };
+            obj.sayHello();
+       // 関数として実行するとwindowオブジェクトを指す
+       console.log(this === window);
     </script>
 </body>
 </html>
