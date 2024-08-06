@@ -8,17 +8,10 @@
 <body>
     <h1>Hello</h1>
     <script>
-       // thisを使った例
-         const obj = {
-              name: 'Tom',
-              sayHello: function() {
-                console.log('Hello ' + this.name);
-                // このthisはobjを指す
-              }
-         };
-            obj.sayHello();
-       // 関数として実行するとwindowオブジェクトを指す
-       console.log(this === window);
+       window.setTimeout(() => {
+           console.log('Hello');
+           
+       }, 3000);
     </script>
 </body>
 </html>
