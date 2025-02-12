@@ -8,3 +8,8 @@ console.log(array);
 // remove value from array
 array.pop();
 console.log(array);
+
+// for in
+for (let i in array) {
+  console.log(array[i]);
+}
