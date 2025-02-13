@@ -18,3 +18,5 @@ for (let i in array) {
 for (let i of array) {
   console.log(i);
 }
+
+// revert index
