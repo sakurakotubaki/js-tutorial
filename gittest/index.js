@@ -13,3 +13,8 @@ console.log(array);
 for (let i in array) {
   console.log(array[i]);
 }
+
+// for of
+for (let i of array) {
+  console.log(i);
+}
